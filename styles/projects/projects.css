@@ -1,0 +1,10 @@
+.text {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+body {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}

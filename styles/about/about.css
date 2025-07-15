@@ -1,0 +1,71 @@
+/*Title*/
+
+h1 {
+  font-family: Roboto, Arial;
+  color: hsl(0, 0%, 96%);
+  padding: 0;
+  margin: 0;
+}
+
+.about-me {
+  width: 90%;
+  max-width: 390px;
+  padding: 0;
+}
+
+.about-me h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+}
+
+.title {
+  font-size: 14px;
+}
+
+/*Timline*/
+
+.timeline {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.timeline-line {
+  width: 5px;
+  height: 280px;
+  margin-left: 4px;
+}
+
+.timeline-1,
+.timeline-2,
+.timeline-3,
+.timeline-4 {
+  position: relative;
+}
+
+.timeline-points {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+
+.date {
+  color: gray;
+}
+
+.timeline-dot {
+  height: 13px;
+  position: absolute;
+  left: -20px;
+}
+
+.timeline-3 a {
+  color: rgb(255, 145, 0);
+}

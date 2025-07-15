@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quans Portfolio</title>
+    <link rel="stylesheet" href="styles/contact/contact.css">
+    <link rel="stylesheet" href="styles/webpage.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <a href="index.html">
+          <img src="images/icons/home.png">
+        </a>
+      </div>
+      <div class="middle-section">
+        <a class="middle-section-about" href="about.html">About</a>
+        <a class="middle-section-contacts" href="contact.html">Contact</a>
+        <a class="middle-section-projects" href="projects.html">Projects</a>
+      </div>
+      <div class="right-section">
+        <a href="01.html">
+          Deutsch
+        </a>
+      </div>
+    </div>
+    <div class="contact-text">
+      <p>Contact me</p>
+    </div>
+    <div class="contact">
+      <div class="contact-email">
+        <img src="images/icons/email-svgrepo-com.svg" class="email-icon">
+        <p>Email</p>
+        <div class="contact-info-email" id="email"
+        data-email="quanhpublic@gmail.com">
+          quanhpublic@gmail.com
+          <div class="tooltip">copy to clipboard</div>
+        </div>
+      </div>
+      <div class="contact-github">
+        <img src="images/icons/githubwhite.svg" class="github-icon">
+        <p>Github</p>
+        <a href="https://github.com/I-likeCats" class="contact-info-github" target="_blank">I-likeCats</a>
+      </div>  
+    </div>
+    <script>
+      document.getElementById('email').addEventListener('click', async e => {
+        const mail = e.target.dataset.email;          // Adresse aus data‑Attr.
+        try {
+          await navigator.clipboard.writeText(mail);  // moderner Clipboard‑API
+          alert('E‑Mail copied: ' + mail);
+        } catch {                                     // Fallback für alte Browser
+          const ta = document.createElement('textarea');
+          ta.value = mail;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          ta.remove();
+          alert('E‑Mail copied (Fallback): ' + mail);
+        }
+      });
+    </script>
+  </body>
+</html>
